@@ -23,7 +23,9 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+],{
+  basename: "/VibeStreamApp"
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
