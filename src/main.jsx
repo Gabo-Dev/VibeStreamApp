@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     ],
   },
 ],{
-  basename: "/VibeStreamApp"
+  basename: process.env.PUBLIC_URL
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
