@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./routes/App.jsx";
-import TopGlobal from "./routes/TopGlobal.jsx";
+import Lyrics from "./routes/Lyrics.jsx";
 import ErrorPage from "./routes/error-page.jsx";
 import "./index.css";
 
@@ -19,8 +19,8 @@ const router = createBrowserRouter(
       errorElement: <ErrorPage />,
       children: [
         {
-          path: "TopGlobal",
-          element: <TopGlobal />,
+          path: "Lyrics",
+          element: <Lyrics />,
           errorElement: <ErrorPage />,
         },
       ],

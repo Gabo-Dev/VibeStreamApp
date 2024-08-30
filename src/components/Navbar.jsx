@@ -7,7 +7,7 @@ function Navbar() {
       {/* Link to navigate to different pages 1rem between each*/}
       <div className="flex p-4  space-x-4">
         <Link to="/">Home</Link>
-        <Link to="/TopGlobal">Top Global</Link>
+        <Link to="/Lyrics">Lyrics</Link>
       </div>  
     </nav>
   );

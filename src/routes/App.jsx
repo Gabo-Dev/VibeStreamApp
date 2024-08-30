@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { Outlet,useMatch} from "react-router-dom";
 import "../index.css";
 import Discover from "./Discover";
+import Footer from "../components/Footer";
 
 function App() {
   const isHomePage = useMatch({path:"/",end:true});
@@ -15,6 +16,7 @@ function App() {
         <Outlet />
        )}
       </main>
+      <Footer />
     </div>
   );
 }
