@@ -16,16 +16,17 @@ import {SongCard} from '../components/SongCard';
  */
 
 const Discover = () => {
-  const genreTitle = "Pop";
+  const [genreTitle,setGenreTitle] = useState('Pop');
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const dispatch = useDispatch();
   const [selectedGenreId, setSelectedGenreId] = useState(genres[0].id); // Default genre is Pop
-  const { data, isFetching, error } = useGetSongsByGenreQuery(selectedGenreId);
+  const { data, isFetching } = useGetSongsByGenreQuery(selectedGenreId);
 
   if (isFetching) return <Loader title="Loading songs..." />;
   // handle genre change
   const handleGenreChange = (e) => {
     const selectedValue = e.target.value;
+    setGenreTitle(selectedValue);
     // check if exists genre with selected value
     const selectedGenre = genres.find((genre) => genre.value === selectedValue);
     if (selectedGenre) {
