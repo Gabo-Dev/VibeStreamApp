@@ -1,7 +1,7 @@
-import {loaderIcon } from "../assets/loaderIcon.jsx";
+import {LoaderIcon } from "../assets/loaderIcon.jsx";
 export const Loader = ({ title }) => (
   <div className="w-full flex justify-center items-center flex-col">
-    <img src="{loaderIcon}" alt="loader" className="w-32 h-32 object-contain" />
+    <LoaderIcon />
     <h1 className="font-bold text-2xl text-white mt-2">
       {title || "Loading..."}
     </h1>
