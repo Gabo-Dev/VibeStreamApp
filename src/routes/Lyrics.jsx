@@ -35,12 +35,13 @@ function Lyrics() {
               placeholder:opacity-50 r px-4 py-2   focus:shadow-lg rounded-full
               focus:shadow-rose-400 "
               name="search"
+              id="search"
               placeholder="Search Here..."
               type="text"
               onChange={handleSearch} // Actualiza el estado al cambiar el valor del input
             />
             <button type="submit">
-              <SearchIcon className="size-8 mx-auto" />
+              <SearchIcon className="size-10  rounded-full" aria-hidden="true" />
             </button>
           </div>
         </form>
