@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { SearchIcon } from "../assets/Icons";
 
 function Lyrics() {
   const [searchText, setSearchText] = useState("");
- 
+
   const handleSearch = (e) => {
     setSearchText(e.target.value); // Actualiza el valor del estado en cada cambio del input
   };
@@ -19,22 +20,29 @@ function Lyrics() {
           className="  p-5 flex  mx-auto place-items-center"
           onSubmit={handleSubmit}
         >
-          <input
+          <div
             className="bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400
-              focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600
+               duration-300 placeholder:text-zinc-600
               placeholder:opacity-50 rounded-full px-4 py-2  shadow-md focus:shadow-lg
-              focus:shadow-rose-400 dark::shadow-md dark:shadow-sky-700"
-            name="search"
-            placeholder="Search Here..."
-            type="text"
-        onChange={handleSearch} // Actualiza el estado al cambiar el valor del input
-          />
-          <button
-            type="submit"
-            className="ml-4 bg-rose-500 text-white p-2 rounded-full"
+             dark::shadow-md dark:shadow-sky-700 space-x-2 flex place-items-center"
           >
-            Search
-          </button>
+            <label htmlFor="search" className="sr-only">
+              Search
+            </label>
+            <input
+              className="bg-zinc-200 text-zinc-600 font-mono 
+              focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600
+              placeholder:opacity-50 r px-4 py-2   focus:shadow-lg rounded-full
+              focus:shadow-rose-400 "
+              name="search"
+              placeholder="Search Here..."
+              type="text"
+              onChange={handleSearch} // Actualiza el estado al cambiar el valor del input
+            />
+            <button type="submit">
+              <SearchIcon className="size-8 mx-auto" />
+            </button>
+          </div>
         </form>
         <div className="flex-auto bg-slate-400">
           <h1 className="font-bold text-2xl text-white ">{searchText}</h1>

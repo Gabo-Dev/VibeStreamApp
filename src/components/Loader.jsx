@@ -1,4 +1,4 @@
-import {LoaderIcon } from "../assets/loaderIcon.jsx";
+import {LoaderIcon } from "../assets/Icons.jsx";
 export const Loader = ({ title }) => (
   <div className="w-full flex justify-center items-center flex-col">
     <LoaderIcon />

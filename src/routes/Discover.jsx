@@ -20,9 +20,9 @@ const Discover = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const dispatch = useDispatch();
   const [selectedGenreId, setSelectedGenreId] = useState(genres[0].id); // Default genre is Pop
-  const { data, isFetching } = useGetSongsByGenreQuery(selectedGenreId);
+  //const { data, isFetching } = useGetSongsByGenreQuery(selectedGenreId);
 
-  if (isFetching) return <Loader title="Loading songs..." />;
+  //if (isFetching) return <Loader title="Loading songs..." />;
   // handle genre change
   const handleGenreChange = (e) => {
     const selectedValue = e.target.value;
@@ -53,7 +53,7 @@ const Discover = () => {
           </select>
         </div>
         <div className="flex flex-wrap  justify-center gap-8 ">
-          {data
+         {/*} {data
             ? data.items?.map((song, i) => (
                 <SongCard
                   key={i}
@@ -62,7 +62,7 @@ const Discover = () => {
                   activeSong={activeSong}
                 />
               ))
-            : "No Data Available"}
+            : "No Data Available"}*/}
         </div>
     </div>
   );
